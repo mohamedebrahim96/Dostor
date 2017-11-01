@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "554816625575",
+    "project_id": "firebase-dostor"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:554816625575:android:cb7afeb0455053c4",
+        "android_client_info": {
+          "package_name": "com.vacuum.app.dostor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "554816625575-8jgu4p0qhq07hl5rqa46uanv6unc2skl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vacuum.app.dostor",
+            "certificate_hash": "6f482d57c892537d4ff041364a655c20eb2f54e8"
+          }
+        },
+        {
+          "client_id": "554816625575-amvo6air6e1keurn59sd6vn1uemkskui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1e7sEZx6iVzjTauqXRnaXVnUKOhYmk0I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

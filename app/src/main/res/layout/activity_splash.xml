@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/brand2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_above="@+id/social"
+        >
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shareklogo"
+            android:scaleType="centerCrop"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="visible"
+        android:id="@+id/social"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:backgroundTint="#48629b"
+            android:drawableLeft="@drawable/if_icon_social_facebook_211902"
+            android:layout_margin="3dp" />
+
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/twitterLoginButton"
+            android:layout_width="220dp"
+            android:layout_height="match_parent"
+            />
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/if_40_google_plus_104464"
+            android:text="Sign in with Google"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="#dc4b38"
+            android:layout_margin="3dp"
+            app:buttonSize="wide"
+            app:theme="@style/Base.CardView"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:id="@+id/later"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/Login_later"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/policy"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="#ffffff"
+                android:id="@+id/terms"
+                android:text="@string/Login_policy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#0645AD"
+                android:layout_marginLeft="3dp"
+                android:id="@+id/terms2"
+                android:text="@string/Login_policy2" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
