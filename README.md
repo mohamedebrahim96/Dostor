@@ -37,8 +37,8 @@ What things you need to install the software and how to install them
 ![4](https://user-images.githubusercontent.com/16405013/32340428-3c6a08c2-c003-11e7-95d9-2fc35fe712f6.jpg)
 ![5](https://user-images.githubusercontent.com/16405013/32340453-4eb2f9bc-c003-11e7-83b8-772b905ec6be.jpg)
 ![6](https://user-images.githubusercontent.com/16405013/32340472-5d8a6420-c003-11e7-9454-4cb08de0c03a.jpg)
-
-
+==========================================================================================
+![826282](https://user-images.githubusercontent.com/16405013/32896016-8acc3cc8-caea-11e7-91e0-b15dba80c181.JPG)
 
 ### Installing
 
