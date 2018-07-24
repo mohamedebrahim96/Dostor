@@ -222,14 +222,8 @@ public class MainActivity extends AppCompatActivity {
             MenuItem mi = menu.getItem(i);
             applyFontToMenuItem(mi);
         }
-
-        /*Menu menu1 = navigationView.getMenu();
-        Drawable yourdrawable = menu1.getItem(4).getIcon(); // change 0 with 1,2 ...
-        yourdrawable.mutate();
-        yourdrawable.setColorFilter(getResources().getColor(R.color.premium), PorterDuff.Mode.SRC_ATOP);*/
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
@@ -262,20 +256,14 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     @Override
     public void onBackPressed() {
         if (!editsearch.isIconified()) {
             editsearch.onActionViewCollapsed();
-            loadHomeFragment();
-        }
-
+            loadHomeFragment(); }
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawers();
-            return;
-        }
-
-
+            return; }
         if (shouldLoadHomeFragOnBackPress) {
             // checking if user is on other navigation menu
             // rather than home
@@ -289,15 +277,10 @@ public class MainActivity extends AppCompatActivity {
         if (CURRENT_TAG == TAG_HOME) {
             super.onBackPressed();
         }
-
     }
-
-
-
     //====================================================================================
     //====================================================================================
     //====================================================================================
-
     private void loadNavHeader() {
         // name, website
 
