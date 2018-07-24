@@ -282,15 +282,11 @@ public class MainActivity extends AppCompatActivity {
     //====================================================================================
     //====================================================================================
     private void loadNavHeader() {
-        // name, website
-
         SharedPreferences prefs = getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE);
         String name = prefs.getString("name", "User Name");//"No name defined" is the default value.
         String email = prefs.getString("email", "email@gmail.com");
         String imageurl = prefs.getString("imageurl", "defaultStringIfNothingFound");
         String cover = prefs.getString("cover", "defaultStringIfNothingFound");
-
-
         txtName.setText(name);
         txtWebsite.setText(email);
 
@@ -309,13 +305,7 @@ public class MainActivity extends AppCompatActivity {
                 .apply(options2)
                 .into(imgNavHeaderBg);
         navigationView.getMenu().getItem(3).setActionView(R.layout.menu_dot);
-        navigationView.setItemIconTintList(null);
-
-    }
-    /***
-     * Returns respected fragment that user
-     * selected from navigation menu
-     */
+        navigationView.setItemIconTintList(null); }
     private void loadHomeFragment() {
         selectNavMenu();
         setToolbarTitle();
@@ -339,7 +329,6 @@ public class MainActivity extends AppCompatActivity {
         // refresh toolbar menu
         invalidateOptionsMenu();
     }
-
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
@@ -367,7 +356,6 @@ public class MainActivity extends AppCompatActivity {
                 return new HomeFragment();
         }
     }
-
     private void setToolbarTitle() {
         getSupportActionBar().setTitle(activityTitles[navItemIndex]);
     }
@@ -514,8 +502,6 @@ public class MainActivity extends AppCompatActivity {
     private void Rate_us() {
         Uri uri = Uri.parse("market://details?id=" + mContext.getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-        // To count with Play market backstack, After pressing back button,
-        // to taken back to our application, we need to add following flags to intent.
         goToMarket.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY |
                 Intent.FLAG_ACTIVITY_NEW_DOCUMENT |
                 Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
@@ -523,8 +509,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(goToMarket);
         } catch (ActivityNotFoundException e) {
             startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("http://play.google.com/store/apps/details?id=" + mContext.getPackageName())));
-        }
+                    Uri.parse("http://play.google.com/store/apps/details?id=" + mContext.getPackageName()))); }
     }
     @Override
     protected void attachBaseContext(Context newBase) {
