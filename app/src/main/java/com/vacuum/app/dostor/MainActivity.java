@@ -371,11 +371,9 @@ public class MainActivity extends AppCompatActivity {
     private void setToolbarTitle() {
         getSupportActionBar().setTitle(activityTitles[navItemIndex]);
     }
-
     private void selectNavMenu() {
         navigationView.getMenu().getItem(navItemIndex).setChecked(true);
     }
-
     private void setUpNavigationView() {
         //Setting Navigation View Item Selected Listener to handle the item click of the navigation menu
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -476,7 +474,6 @@ public class MainActivity extends AppCompatActivity {
 
         //calling sync state is necessary or else your hamburger icon wont show up
     }
-
     private void log_out() {
         LoginManager.getInstance().logOut();
                 editor = mContext.getSharedPreferences(MY_PREFS_NAME, MODE_PRIVATE).edit();
@@ -500,9 +497,6 @@ public class MainActivity extends AppCompatActivity {
                 Twitter.logOut();
         startActivity(new Intent(MainActivity.this, SplashScreen.class));
     }
-
-
-
     private void applyFontToMenuItem(MenuItem mi) {
 
         if(mi.getItemId() != R.id.gopremium){
@@ -517,8 +511,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
-
     private void Rate_us() {
         Uri uri = Uri.parse("market://details?id=" + mContext.getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
