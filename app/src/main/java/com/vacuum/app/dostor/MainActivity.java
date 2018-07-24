@@ -312,32 +312,21 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setItemIconTintList(null);
 
     }
-
     /***
      * Returns respected fragment that user
      * selected from navigation menu
      */
     private void loadHomeFragment() {
-        // selecting appropriate nav menu item
         selectNavMenu();
-
-        // set toolbar title
         setToolbarTitle();
-
-        // if user select the current navigation menu again, don't do anything
-        // just close the navigation drawer
         if (getSupportFragmentManager().findFragmentByTag(CURRENT_TAG) != null) {
             drawer.closeDrawers();
-
-            // show or hide the fab button
             return;
         }
-
         // Sometimes, when fragment has huge data, screen seems hanging
         // when switching between navigation menus
         // So using runnable, the fragment is loaded with cross fade effect
         // This effect can be seen in GMail app
-
                 // update the favourite content by replacing fragments
                 Fragment fragment = getHomeFragment();
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -345,11 +334,8 @@ public class MainActivity extends AppCompatActivity {
                         android.R.anim.fade_out);
                 fragmentTransaction.replace(R.id.container, fragment, CURRENT_TAG);
                 fragmentTransaction.commitAllowingStateLoss();
-
-
         //Closing drawer on item click
         drawer.closeDrawers();
-
         // refresh toolbar menu
         invalidateOptionsMenu();
     }
