@@ -1,5 +1,7 @@
 # Sharek Dostor
 
+
+
 The Arab republic of Egypt Constitution for Android.
 This includes the new Android Material theme, and can be customized to either Light or Dark. 
 Have all of your guaranteed rights, in the palm of your hand!
